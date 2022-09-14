@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Latihan 1 Javascript</title>
+</head>
+<body>
+<noscript>Javascript Belum Diaktifkan</noscript>
+<h1>Latihan 2 Javascript</h1>
+<p>Dibawah ini akan dilakukan pemrograman javascript</p>
+<p>
+  <label for="input_a">Input A</label>
+  <input type="number" min="0" max="99" id="input_a" required />
+</p>
+<p>
+  <label for="input_b">Input B</label>
+  <input type="number" min="0" max="99" id="input_b" required />
+</p>
+<p>
+  <button id="btn_tambah" type="button" onclick="tambah();"> + </button>
+  &nbsp;
+  <button id="btn_kurang" type="button" onclick="kurang();"> - </button>
+  &nbsp;
+  <button id="btn_kali" type="button" onclick="kali()"> * </button>
+  &nbsp;
+  <button id="btn_bagi" type="button" onclick="bagi();"> / </button>
+</p>
+<p>Hasilnya : <span id="output"></span></p>
+<script>
+function tambah() {
+  let input_a = document.getElementById("input_a").value;
+  let input_b = document.getElementById("input_b").value;
+  document.getElementById("output").innerHTML=parseInt(input_a) + parseInt(input_b);
+}
+
+function kurang() {
+  let input_a = document.getElementById("input_a").value;
+  let input_b = document.getElementById("input_b").value;
+  document.getElementById("output").innerHTML=parseInt(input_a) - parseInt(input_b);
+}
+
+function kali() {
+  let input_a = document.getElementById("input_a").value;
+  let input_b = document.getElementById("input_b").value;
+  document.getElementById("output").innerHTML=parseInt(input_a) * parseInt(input_b);
+}
+
+function bagi() {
+  let input_a = document.getElementById("input_a").value;
+  let input_b = document.getElementById("input_b").value;
+  document.getElementById("output").innerHTML=parseFloat(input_a) / parseFloat(input_b);
+}
+
+var bagi1 = function(){
+  let input_a = document.getElementById("input_a").value;
+  let input_b = document.getElementById("input_b").value;
+  document.getElementById("output").innerHTML=parseFloat(input_a) / parseFloat(input_b);
+}
+
+const bagi2 = () => {
+  let input_a = document.getElementById("input_a").value;
+  let input_b = document.getElementById("input_b").value;
+  document.getElementById("output").innerHTML=parseFloat(input_a) / parseFloat(input_b);
+}
+</script>
+</body>
+</html> 
